@@ -40,7 +40,7 @@ RUN yum -y install epel-release && \
     wget "$APR_BZ2_URL" && \
     rpmbuild -tb --clean "apr-$APR_VERSION.tar.bz2" && \
     rpm -ivh /root/rpmbuild/RPMS/x86_64/apr-*.rpm && \
-    rm "$APR_VERSION.tar.bz2" && \
+    rm "apr-$APR_VERSION.tar.bz2" && \
     \
     wget ftp://ftp.at.netbsd.org/opsys/linux/fedora/linux/releases/17/Everything/source/SRPMS/d/distcache-1.4.5-23.src.rpm && \
     rpmbuild --rebuild --clean distcache-1.4.5-23.src.rpm && \
