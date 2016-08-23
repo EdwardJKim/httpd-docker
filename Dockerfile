@@ -53,8 +53,8 @@ RUN yum -y install epel-release && \
     rpm -ivh /root/rpmbuild/RPMS/x86_64/mod_*.rpm && \
     rm "httpd-$HTTPD_VERSION.tar.bz2"
   
-
 COPY httpd-foreground /usr/local/bin/
+RUN chmod +x /usr/local/bin/httpd-foreground
 
 EXPOSE 80 443
 
